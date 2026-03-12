@@ -2,16 +2,15 @@
 <html>
 
 <head>
-
 <title>PPL Auction Arena</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <h1>PPL Auction Arena</h1>
+
+<!-- LOGIN SCREEN -->
 
 <div id="loginPage">
 
@@ -20,12 +19,15 @@
 <select id="loginUser">
 
 <option value="admin">Admin</option>
+
 <option value="OM">Om Strikers</option>
 <option value="VR">Vedant Riders</option>
 <option value="SC">Siddhant Challengers</option>
 <option value="PI">Prabal Indians</option>
 <option value="AB">Ayush Blasters</option>
 <option value="AT">Ansh Titan</option>
+
+<option value="viewer">Viewer</option>
 
 </select>
 
@@ -35,16 +37,27 @@
 
 </div>
 
-<div id="auctionPage">
 
-<div id="adminPanel">
+<!-- ADMIN SCREEN -->
 
-<h2>Admin Control</h2>
+<div id="adminPage" style="display:none">
+
+<h2>Admin Control Panel</h2>
+
+<div class="adminBox">
+
+<h3>Select Bidding Teams</h3>
 
 <select id="team1"></select>
 <select id="team2"></select>
 
-<button onclick="setTeams()">Set Teams</button>
+<button onclick="setTeams()">Confirm Teams</button>
+
+</div>
+
+<div class="adminBox">
+
+<h3>Select Player</h3>
 
 <select id="playerSelect"></select>
 
@@ -54,6 +67,12 @@
 
 </div>
 
+</div>
+
+
+<!-- MAIN AUCTION SCREEN (EVERYONE CAN SEE) -->
+
+<div id="auctionPage" style="display:none">
 
 <div id="auctionCard">
 
@@ -61,7 +80,7 @@
 
 <p>Base Price: <span id="basePrice"></span></p>
 
-<p class="bigBid">₹ <span id="currentBid"></span></p>
+<h1 class="bigBid">₹ <span id="currentBid"></span></h1>
 
 <p>Highest Bidder: <span id="highestBid">None</span></p>
 
@@ -94,6 +113,7 @@
 <h2>Teams</h2>
 
 <div id="teams"></div>
+
 
 <h2>Auction Results</h2>
 
