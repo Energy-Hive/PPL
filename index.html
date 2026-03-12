@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>PPL Auction Arena</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>PPL Auction Arena</h1>
+
+<div id="loginPage">
+
+<h2>Login</h2>
+
+<select id="loginUser">
+
+<option value="admin">Admin</option>
+<option value="OM">Om Strikers</option>
+<option value="VR">Vedant Riders</option>
+<option value="SC">Siddhant Challengers</option>
+<option value="PI">Prabal Indians</option>
+<option value="AB">Ayush Blasters</option>
+<option value="AT">Ansh Titan</option>
+
+</select>
+
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Enter</button>
+
+</div>
+
+<div id="auctionPage">
+
+<div id="adminPanel">
+
+<h2>Admin Control</h2>
+
+<select id="team1"></select>
+<select id="team2"></select>
+
+<button onclick="setTeams()">Set Teams</button>
+
+<select id="playerSelect"></select>
+
+<button onclick="loadPlayer()">Load Player</button>
+
+<button onclick="startAuction()">Start Auction</button>
+
+</div>
+
+
+<div id="auctionCard">
+
+<h2 id="playerName">Player</h2>
+
+<p>Base Price: <span id="basePrice"></span></p>
+
+<p class="bigBid">₹ <span id="currentBid"></span></p>
+
+<p>Highest Bidder: <span id="highestBid">None</span></p>
+
+<p class="timer">⏱ <span id="timer">10</span></p>
+
+</div>
+
+
+<div id="teamBattle">
+
+<div class="battleTeam">
+
+<h3 id="team1Name"></h3>
+
+<button id="team1Bid">BID +5</button>
+
+</div>
+
+<div class="battleTeam">
+
+<h3 id="team2Name"></h3>
+
+<button id="team2Bid">BID +5</button>
+
+</div>
+
+</div>
+
+
+<h2>Teams</h2>
+
+<div id="teams"></div>
+
+<h2>Auction Results</h2>
+
+<table>
+
+<tr>
+<th>Player</th>
+<th>Base</th>
+<th>Sold</th>
+<th>Team</th>
+</tr>
+
+<tbody id="results"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
